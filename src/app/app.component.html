@@ -1,5 +1,39 @@
-<h1>
-  {{title}}
-</h1>
-<fa-other>bla bla</fa-other>
-<fa-another>bla bla</fa-another>
+<!--Basic component and creating them-->
+<div class="tutorial-element">
+  <h1>{{title}}</h1>
+
+  <fa-other></fa-other>
+
+  <!--Using ng-content-->
+  <fa-another>
+    <div>
+      <h1>Hello!</h1>
+      <p>World!</p>
+    </div>
+  </fa-another>
+
+  <fa-another>
+    <div>Something else...</div>
+  </fa-another>
+
+</div>
+
+<!--Databinding Examples-->
+<fa-databinding></fa-databinding>
+
+<!--Lifecycles Examples-->
+<div class="tutorial-element">
+
+  <fa-lifecycle *ngIf="!erase" [bindable]="boundValue">
+    <p>{{test}}</p>
+  </fa-lifecycle>
+
+
+  <button (click)="erase = true">Click to Delete</button>
+  <button (click)="test = 'Changed Value'">Click to Change Value</button>
+  <button (click)="boundValue = 2000">Click to Change Binding</button>
+
+</div>
+
+
+

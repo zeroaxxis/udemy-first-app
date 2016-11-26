@@ -2,25 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <h1>Inline Template</h1>
-    <fa-other></fa-other>
-    <fa-another>
-        <div>
-          <h1>Hello!</h1>
-          <p>World!</p>
-        </div>
-    </fa-another>
-    <fa-another>
-        <div>Something else...</div>
-    </fa-another>
-  `,
-  styles: [`
-    h1{
-      color:red;
-    }
-  `]
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css']
 })
 export class AppComponent {
-  title = 'I changed it!';
+  title = 'Basic Component Tutorial';
+  erase = false;
+  test= 'Starting value';
+  boundValue = 1000;
 }
